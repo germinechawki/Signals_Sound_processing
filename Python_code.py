@@ -49,3 +49,15 @@ def plt_time_domain_after():
 def save_file():
     # write your code here "" :)
     return
+
+
+if __name__=="__main__":   #we can reduce the number of functions by combining some of them while coding
+    read_file()
+    plt_time_domain_before()
+    fourier_transform()
+    plt_freq_domain_before()
+    filter_signal()
+    plt_freq_domain_after()
+    fourier_inverse_transform()
+    plt_time_domain_after()
+    save_file()
