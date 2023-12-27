@@ -1,13 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+
 # function of accessing (reading) the audio file
-def read_file():
-    # write your code here "" :)
-    return
+def read_file(str):
+    sampleRate , audioData= wavfile.read(str)
+    return sampleRate , audioData
 
 
 # plot audio file (time domain) before editing
-def plt_time_domain_before():
-    # write your code here "" :)
-    return
+def plt_time_domain_before(sampleRate,audioData):
+    time = np.arange(0,len(audioData))/sampleRate
+    plt.figure(figsize=(10,10))
+    plt.plot(time,audio)
+    plt.xlabel('Time')
+    plt.ylabel('Amplitude')
+    plt.grid()
+    plt.show()
 
 
 # function of using fourier transform
