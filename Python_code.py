@@ -12,7 +12,7 @@ def read_file(str):
 def plt_time_domain_before(sampleRate,audioData):
     time = np.arange(0,len(audioData))/sampleRate
     plt.figure(figsize=(10,10))
-    plt.plot(time,audio)
+    plt.plot(time,audioData)
     plt.xlabel('Time')
     plt.ylabel('Amplitude')
     plt.grid()
