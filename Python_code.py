@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.io import wavfile
+import wave
 
 
 # function of accessing (reading) the audio file
@@ -44,9 +45,9 @@ def plt_freq_domain_after():
 
 
 # function of using inverse fourier transform
-def fourier_inverse_transform():
-    # write your code here "" :)
-    return
+def fourier_inverse_transform(tx #el return mn fourier):
+    x=np.fft.ifft(tx)
+    return x
 
 
 # plot audio file (time domain) after editing
@@ -56,9 +57,9 @@ def plt_time_domain_after():
 
 
 # function of saving new audio
-def save_file():
-    # write your code here "" :)
-    return
+def save_file(#the file i wish to save):
+    y=wave.dump(#the file i wish to save,open(esm el file,"wb")) 
+    return y
 
 
 if __name__ == "__main__":
