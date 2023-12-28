@@ -4,16 +4,16 @@ from scipy.io import wavfile
 
 
 # function of accessing (reading) the audio file
-def read_file(str):
-    sampleRate, audioData = wavfile.read(str)
-    return sampleRate, audioData
+def read_file(f_name):
+    sample_rate, audio_data = wavfile.read(f_name)
+    return sample_rate, audio_data
 
 
 # plot audio file (time domain) before editing
-def plt_time_domain_before(sampleRate, audioData):
-    time = np.arange(0, len(audioData)) / sampleRate
+def plt_time_domain_before(sample_rate, audio_data):
+    time = np.arange(0, len(audio_data)) / sample_rate
     plt.figure(figsize=(10, 10))
-    plt.plot(time, audioData)
+    plt.plot(time, audio_data)
     plt.xlabel('Time')
     plt.ylabel('Amplitude')
     plt.grid()
